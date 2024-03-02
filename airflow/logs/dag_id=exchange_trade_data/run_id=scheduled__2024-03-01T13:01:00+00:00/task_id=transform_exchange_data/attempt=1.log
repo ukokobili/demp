@@ -1,0 +1,26 @@
+[2024-03-01T14:43:46.982+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: exchange_trade_data.transform_exchange_data scheduled__2024-03-01T13:01:00+00:00 [queued]>
+[2024-03-01T14:43:47.008+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: exchange_trade_data.transform_exchange_data scheduled__2024-03-01T13:01:00+00:00 [queued]>
+[2024-03-01T14:43:47.008+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 1
+[2024-03-01T14:43:47.288+0000] {taskinstance.py:2191} INFO - Executing <Task(_PythonDecoratedOperator): transform_exchange_data> on 2024-03-01 13:01:00+00:00
+[2024-03-01T14:43:47.300+0000] {standard_task_runner.py:60} INFO - Started process 919 to run task
+[2024-03-01T14:43:47.308+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'exchange_trade_data', 'transform_exchange_data', 'scheduled__2024-03-01T13:01:00+00:00', '--job-id', '13', '--raw', '--subdir', 'DAGS_FOLDER/exchange.py', '--cfg-path', '/tmp/tmpb9yb1ymp']
+[2024-03-01T14:43:47.310+0000] {standard_task_runner.py:88} INFO - Job 13: Subtask transform_exchange_data
+[2024-03-01T14:43:47.407+0000] {task_command.py:423} INFO - Running <TaskInstance: exchange_trade_data.transform_exchange_data scheduled__2024-03-01T13:01:00+00:00 [running]> on host 11bab81981d3
+[2024-03-01T14:43:47.600+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='exchange_trade_data' AIRFLOW_CTX_TASK_ID='transform_exchange_data' AIRFLOW_CTX_EXECUTION_DATE='2024-03-01T13:01:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-03-01T13:01:00+00:00'
+[2024-03-01T14:43:47.606+0000] {python.py:201} INFO - Done. Returned value was:         exchangeId              name  ...        updated                  updated_at
+0          binance           Binance  ...  1709304173256  2024-03-01T14:42:53.256000
+1             gdax      Coinbase Pro  ...  1709304175952  2024-03-01T14:42:55.952000
+2         whitebit          WhiteBIT  ...  1709304175960  2024-03-01T14:42:55.960000
+3        digifinex         DigiFinex  ...  1709304167775  2024-03-01T14:42:47.775000
+4             gate              Gate  ...  1709304176945  2024-03-01T14:42:56.945000
+..             ...               ...  ...            ...                         ...
+68  therocktrading  The Rock Trading  ...  1676660097265  2023-02-17T18:54:57.265000
+69              zb                ZB  ...  1662264169320  2022-09-04T04:02:49.320000
+70       thorchain         THORChain  ...  1668435396236  2022-11-14T14:16:36.236000
+71          bitbay            BitBay  ...              0                        None
+72   bithumbglobal    Bithumb Global  ...  1692326335935  2023-08-18T02:38:55.935000
+
+[73 rows x 10 columns]
+[2024-03-01T14:43:47.776+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=exchange_trade_data, task_id=transform_exchange_data, execution_date=20240301T130100, start_date=20240301T144346, end_date=20240301T144347
+[2024-03-01T14:43:47.849+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-03-01T14:43:47.918+0000] {taskinstance.py:3280} INFO - 1 downstream tasks scheduled from follow-on schedule check

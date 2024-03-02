@@ -1,0 +1,69 @@
+[2024-02-25T07:12:05.351+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: exchange_trade_data.transform_exchange_data manual__2024-02-25T07:11:52.276091+00:00 [queued]>
+[2024-02-25T07:12:05.399+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: exchange_trade_data.transform_exchange_data manual__2024-02-25T07:11:52.276091+00:00 [queued]>
+[2024-02-25T07:12:05.401+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 1
+[2024-02-25T07:12:05.495+0000] {taskinstance.py:2191} INFO - Executing <Task(_PythonDecoratedOperator): transform_exchange_data> on 2024-02-25 07:11:52.276091+00:00
+[2024-02-25T07:12:05.516+0000] {standard_task_runner.py:60} INFO - Started process 1246 to run task
+[2024-02-25T07:12:05.527+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'exchange_trade_data', 'transform_exchange_data', 'manual__2024-02-25T07:11:52.276091+00:00', '--job-id', '22', '--raw', '--subdir', 'DAGS_FOLDER/exchange.py', '--cfg-path', '/tmp/tmp735bav_o']
+[2024-02-25T07:12:05.532+0000] {standard_task_runner.py:88} INFO - Job 22: Subtask transform_exchange_data
+[2024-02-25T07:12:06.357+0000] {task_command.py:423} INFO - Running <TaskInstance: exchange_trade_data.transform_exchange_data manual__2024-02-25T07:11:52.276091+00:00 [running]> on host f5283f9a0a92
+[2024-02-25T07:12:06.797+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='exchange_trade_data' AIRFLOW_CTX_TASK_ID='transform_exchange_data' AIRFLOW_CTX_EXECUTION_DATE='2024-02-25T07:11:52.276091+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-02-25T07:11:52.276091+00:00'
+[2024-02-25T07:12:07.470+0000] {python.py:201} INFO - Done. Returned value was:    exchangeId  ...                                         updated_at
+0     binance  ...  {{ task_instance.xcom_pull(task_ids='get_utc_f...
+1        gdax  ...  {{ task_instance.xcom_pull(task_ids='get_utc_f...
+2   digifinex  ...  {{ task_instance.xcom_pull(task_ids='get_utc_f...
+3        gate  ...  {{ task_instance.xcom_pull(task_ids='get_utc_f...
+4      kucoin  ...  {{ task_instance.xcom_pull(task_ids='get_utc_f...
+..        ...  ...                                                ...
+68   coinbene  ...  {{ task_instance.xcom_pull(task_ids='get_utc_f...
+69  cointiger  ...  {{ task_instance.xcom_pull(task_ids='get_utc_f...
+70     hotbit  ...  {{ task_instance.xcom_pull(task_ids='get_utc_f...
+71       kuna  ...  {{ task_instance.xcom_pull(task_ids='get_utc_f...
+72    mxc-com  ...  {{ task_instance.xcom_pull(task_ids='get_utc_f...
+
+[73 rows x 10 columns]
+[2024-02-25T07:12:07.667+0000] {xcom.py:664} ERROR - ('Could not convert XComArg(<Task(_PythonDecoratedOperator): get_utc_from_unix_time>) with type PlainXComArg: did not recognize Python value type when inferring an Arrow data type', 'Conversion failed for column updated_at with type object'). If you are using pickle instead of JSON for XCom, then you need to enable pickle support for XCom in your *** config or make sure to decorate your object with attr.
+[2024-02-25T07:12:07.677+0000] {taskinstance.py:2698} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 440, in _execute_task
+    task_instance.xcom_push(key=XCOM_RETURN_KEY, value=xcom_value, session=session)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/utils/session.py", line 76, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 2980, in xcom_push
+    XCom.set(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/utils/session.py", line 76, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/xcom.py", line 247, in set
+    value = cls.serialize_value(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/xcom.py", line 662, in serialize_value
+    return json.dumps(value, cls=XComEncoder).encode("UTF-8")
+  File "/usr/local/lib/python3.8/json/__init__.py", line 234, in dumps
+    return cls(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/utils/json.py", line 104, in encode
+    return super().encode(o)
+  File "/usr/local/lib/python3.8/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/local/lib/python3.8/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/utils/json.py", line 91, in default
+    return serialize(o)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/serialization/serde.py", line 145, in serialize
+    data, classname, version, is_serialized = _serializers[qn].serialize(o)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/serialization/serializers/pandas.py", line 49, in serialize
+    table = pa.Table.from_pandas(o)
+  File "pyarrow/table.pxi", line 3869, in pyarrow.lib.Table.from_pandas
+  File "/home/airflow/.local/lib/python3.8/site-packages/pyarrow/pandas_compat.py", line 613, in dataframe_to_arrays
+    arrays = [convert_column(c, f)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pyarrow/pandas_compat.py", line 613, in <listcomp>
+    arrays = [convert_column(c, f)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pyarrow/pandas_compat.py", line 600, in convert_column
+    raise e
+  File "/home/airflow/.local/lib/python3.8/site-packages/pyarrow/pandas_compat.py", line 594, in convert_column
+    result = pa.array(col, type=type_, from_pandas=True, safe=safe)
+  File "pyarrow/array.pxi", line 340, in pyarrow.lib.array
+  File "pyarrow/array.pxi", line 86, in pyarrow.lib._ndarray_to_array
+  File "pyarrow/error.pxi", line 91, in pyarrow.lib.check_status
+pyarrow.lib.ArrowInvalid: ('Could not convert XComArg(<Task(_PythonDecoratedOperator): get_utc_from_unix_time>) with type PlainXComArg: did not recognize Python value type when inferring an Arrow data type', 'Conversion failed for column updated_at with type object')
+[2024-02-25T07:12:07.714+0000] {taskinstance.py:1138} INFO - Marking task as FAILED. dag_id=exchange_trade_data, task_id=transform_exchange_data, execution_date=20240225T071152, start_date=20240225T071205, end_date=20240225T071207
+[2024-02-25T07:12:07.780+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 22 for task transform_exchange_data (('Could not convert XComArg(<Task(_PythonDecoratedOperator): get_utc_from_unix_time>) with type PlainXComArg: did not recognize Python value type when inferring an Arrow data type', 'Conversion failed for column updated_at with type object'); 1246)
+[2024-02-25T07:12:07.858+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-02-25T07:12:08.755+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

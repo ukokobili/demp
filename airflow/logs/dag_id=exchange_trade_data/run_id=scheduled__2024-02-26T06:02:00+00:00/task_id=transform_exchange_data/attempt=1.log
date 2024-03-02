@@ -1,0 +1,52 @@
+[2024-02-26T07:02:05.431+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: exchange_trade_data.transform_exchange_data scheduled__2024-02-26T06:02:00+00:00 [queued]>
+[2024-02-26T07:02:05.445+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: exchange_trade_data.transform_exchange_data scheduled__2024-02-26T06:02:00+00:00 [queued]>
+[2024-02-26T07:02:05.445+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 1
+[2024-02-26T07:02:05.660+0000] {taskinstance.py:2191} INFO - Executing <Task(_PythonDecoratedOperator): transform_exchange_data> on 2024-02-26 06:02:00+00:00
+[2024-02-26T07:02:05.668+0000] {standard_task_runner.py:60} INFO - Started process 2605 to run task
+[2024-02-26T07:02:05.675+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'exchange_trade_data', 'transform_exchange_data', 'scheduled__2024-02-26T06:02:00+00:00', '--job-id', '43', '--raw', '--subdir', 'DAGS_FOLDER/exchange.py', '--cfg-path', '/tmp/tmpaozcienf']
+[2024-02-26T07:02:05.677+0000] {standard_task_runner.py:88} INFO - Job 43: Subtask transform_exchange_data
+[2024-02-26T07:02:05.760+0000] {task_command.py:423} INFO - Running <TaskInstance: exchange_trade_data.transform_exchange_data scheduled__2024-02-26T06:02:00+00:00 [running]> on host f5283f9a0a92
+[2024-02-26T07:02:05.910+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='exchange_trade_data' AIRFLOW_CTX_TASK_ID='transform_exchange_data' AIRFLOW_CTX_EXECUTION_DATE='2024-02-26T06:02:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-02-26T06:02:00+00:00'
+[2024-02-26T07:02:05.927+0000] {python.py:201} INFO - Done. Returned value was:     exchangeId          name  ...        updated                    updated_at
+0      binance       Binance  ...  1708930889001 1970-01-01 00:28:28.930889001
+1         gdax  Coinbase Pro  ...  1708930888288 1970-01-01 00:28:28.930888288
+2    digifinex     DigiFinex  ...  1708930888541 1970-01-01 00:28:28.930888541
+3         gate          Gate  ...  1708930889001 1970-01-01 00:28:28.930889001
+4   uniswap-v3  Uniswap (V3)  ...  1708930889003 1970-01-01 00:28:28.930889003
+..         ...           ...  ...            ...                           ...
+68    coinbene      Coinbene  ...              0 1970-01-01 00:00:00.000000000
+69   cointiger     CoinTiger  ...  1707114784242 1970-01-01 00:28:27.114784242
+70      hotbit        Hotbit  ...  1684920757709 1970-01-01 00:28:04.920757709
+71        kuna          Kuna  ...  1677701260207 1970-01-01 00:27:57.701260207
+72     mxc-com       MXC.COM  ...              0 1970-01-01 00:00:00.000000000
+
+[73 rows x 10 columns]
+[2024-02-26T07:02:06.002+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=exchange_trade_data, task_id=transform_exchange_data, execution_date=20240226T060200, start_date=20240226T070205, end_date=20240226T070206
+[2024-02-26T07:02:06.049+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-02-26T07:02:06.081+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-02-26T07:40:53.074+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: exchange_trade_data.transform_exchange_data scheduled__2024-02-26T06:02:00+00:00 [queued]>
+[2024-02-26T07:40:53.103+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: exchange_trade_data.transform_exchange_data scheduled__2024-02-26T06:02:00+00:00 [queued]>
+[2024-02-26T07:40:53.104+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 1
+[2024-02-26T07:40:53.998+0000] {taskinstance.py:2191} INFO - Executing <Task(_PythonDecoratedOperator): transform_exchange_data> on 2024-02-26 06:02:00+00:00
+[2024-02-26T07:40:54.041+0000] {standard_task_runner.py:60} INFO - Started process 3197 to run task
+[2024-02-26T07:40:54.083+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'exchange_trade_data', 'transform_exchange_data', 'scheduled__2024-02-26T06:02:00+00:00', '--job-id', '51', '--raw', '--subdir', 'DAGS_FOLDER/exchange.py', '--cfg-path', '/tmp/tmpz2atbm1v']
+[2024-02-26T07:40:54.121+0000] {standard_task_runner.py:88} INFO - Job 51: Subtask transform_exchange_data
+[2024-02-26T07:40:54.516+0000] {task_command.py:423} INFO - Running <TaskInstance: exchange_trade_data.transform_exchange_data scheduled__2024-02-26T06:02:00+00:00 [running]> on host f5283f9a0a92
+[2024-02-26T07:40:55.095+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='exchange_trade_data' AIRFLOW_CTX_TASK_ID='transform_exchange_data' AIRFLOW_CTX_EXECUTION_DATE='2024-02-26T06:02:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-02-26T06:02:00+00:00'
+[2024-02-26T07:40:55.127+0000] {python.py:201} INFO - Done. Returned value was:         exchangeId            name  ...        updated                  updated_at
+0          binance         Binance  ...  1708933202375  2024-02-26T07:40:02.375000
+1             gdax    Coinbase Pro  ...  1708933229337  2024-02-26T07:40:29.337000
+2        digifinex       DigiFinex  ...  1708933215117  2024-02-26T07:40:15.117000
+3       uniswap-v3    Uniswap (V3)  ...  1708933229556  2024-02-26T07:40:29.556000
+4             gate            Gate  ...  1708933229155  2024-02-26T07:40:29.155000
+..             ...             ...  ...            ...                         ...
+68         bittrex         Bittrex  ...              0                        None
+69            bkex            Bkex  ...              0                        None
+70  blockchain-com  Blockchain.com  ...              0                        None
+71        coinbene        Coinbene  ...              0                        None
+72       cointiger       CoinTiger  ...  1707114784242  2024-02-05T06:33:04.242000
+
+[73 rows x 10 columns]
+[2024-02-26T07:40:55.968+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=exchange_trade_data, task_id=transform_exchange_data, execution_date=20240226T060200, start_date=20240226T074053, end_date=20240226T074055
+[2024-02-26T07:40:56.139+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-02-26T07:40:56.252+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

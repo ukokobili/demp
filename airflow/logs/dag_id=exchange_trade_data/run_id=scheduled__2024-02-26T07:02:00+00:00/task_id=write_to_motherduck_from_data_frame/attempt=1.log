@@ -1,0 +1,52 @@
+[2024-02-26T08:02:07.435+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: exchange_trade_data.write_to_motherduck_from_data_frame scheduled__2024-02-26T07:02:00+00:00 [queued]>
+[2024-02-26T08:02:07.449+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: exchange_trade_data.write_to_motherduck_from_data_frame scheduled__2024-02-26T07:02:00+00:00 [queued]>
+[2024-02-26T08:02:07.450+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 1
+[2024-02-26T08:02:07.636+0000] {taskinstance.py:2191} INFO - Executing <Task(_PythonDecoratedOperator): write_to_motherduck_from_data_frame> on 2024-02-26 07:02:00+00:00
+[2024-02-26T08:02:07.644+0000] {standard_task_runner.py:60} INFO - Started process 4567 to run task
+[2024-02-26T08:02:07.650+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'exchange_trade_data', 'write_to_motherduck_from_data_frame', 'scheduled__2024-02-26T07:02:00+00:00', '--job-id', '64', '--raw', '--subdir', 'DAGS_FOLDER/exchange.py', '--cfg-path', '/tmp/tmp2_et_x_8']
+[2024-02-26T08:02:07.652+0000] {standard_task_runner.py:88} INFO - Job 64: Subtask write_to_motherduck_from_data_frame
+[2024-02-26T08:02:07.747+0000] {task_command.py:423} INFO - Running <TaskInstance: exchange_trade_data.write_to_motherduck_from_data_frame scheduled__2024-02-26T07:02:00+00:00 [running]> on host f5283f9a0a92
+[2024-02-26T08:02:07.976+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='exchange_trade_data' AIRFLOW_CTX_TASK_ID='write_to_motherduck_from_data_frame' AIRFLOW_CTX_EXECUTION_DATE='2024-02-26T07:02:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-02-26T07:02:00+00:00'
+[2024-02-26T08:02:07.979+0000] {taskinstance.py:2698} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 241, in execute
+    return_value = super().execute(context)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 199, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 216, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/exchange.py", line 95, in write_to_motherduck_from_data_frame
+    curr= con.cursor()
+AttributeError: 'NoneType' object has no attribute 'cursor'
+[2024-02-26T08:02:07.992+0000] {taskinstance.py:1138} INFO - Marking task as FAILED. dag_id=exchange_trade_data, task_id=write_to_motherduck_from_data_frame, execution_date=20240226T070200, start_date=20240226T080207, end_date=20240226T080207
+[2024-02-26T08:02:08.009+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 64 for task write_to_motherduck_from_data_frame ('NoneType' object has no attribute 'cursor'; 4567)
+[2024-02-26T08:02:08.026+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-02-26T08:02:08.053+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-02-26T08:13:13.454+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: exchange_trade_data.write_to_motherduck_from_data_frame scheduled__2024-02-26T07:02:00+00:00 [queued]>
+[2024-02-26T08:13:13.468+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: exchange_trade_data.write_to_motherduck_from_data_frame scheduled__2024-02-26T07:02:00+00:00 [queued]>
+[2024-02-26T08:13:13.469+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 1
+[2024-02-26T08:13:13.700+0000] {taskinstance.py:2191} INFO - Executing <Task(_PythonDecoratedOperator): write_to_motherduck_from_data_frame> on 2024-02-26 07:02:00+00:00
+[2024-02-26T08:13:13.707+0000] {standard_task_runner.py:60} INFO - Started process 5812 to run task
+[2024-02-26T08:13:13.712+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'exchange_trade_data', 'write_to_motherduck_from_data_frame', 'scheduled__2024-02-26T07:02:00+00:00', '--job-id', '76', '--raw', '--subdir', 'DAGS_FOLDER/exchange.py', '--cfg-path', '/tmp/tmp36cyltsy']
+[2024-02-26T08:13:13.715+0000] {standard_task_runner.py:88} INFO - Job 76: Subtask write_to_motherduck_from_data_frame
+[2024-02-26T08:13:13.785+0000] {task_command.py:423} INFO - Running <TaskInstance: exchange_trade_data.write_to_motherduck_from_data_frame scheduled__2024-02-26T07:02:00+00:00 [running]> on host f5283f9a0a92
+[2024-02-26T08:13:14.004+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='exchange_trade_data' AIRFLOW_CTX_TASK_ID='write_to_motherduck_from_data_frame' AIRFLOW_CTX_EXECUTION_DATE='2024-02-26T07:02:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-02-26T07:02:00+00:00'
+[2024-02-26T08:13:14.006+0000] {taskinstance.py:2698} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 241, in execute
+    return_value = super().execute(context)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 199, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 216, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/exchange.py", line 96, in write_to_motherduck_from_data_frame
+    con.execute(
+AttributeError: 'NoneType' object has no attribute 'execute'
+[2024-02-26T08:13:14.018+0000] {taskinstance.py:1138} INFO - Marking task as FAILED. dag_id=exchange_trade_data, task_id=write_to_motherduck_from_data_frame, execution_date=20240226T070200, start_date=20240226T081313, end_date=20240226T081314
+[2024-02-26T08:13:14.042+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 76 for task write_to_motherduck_from_data_frame ('NoneType' object has no attribute 'execute'; 5812)
+[2024-02-26T08:13:14.085+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-02-26T08:13:14.109+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

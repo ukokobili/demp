@@ -1,0 +1,30 @@
+[2024-02-27T06:03:05.308+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: exchange_trade_data.write_to_motherduck_from_data_frame scheduled__2024-02-27T05:03:00+00:00 [queued]>
+[2024-02-27T06:03:05.321+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: exchange_trade_data.write_to_motherduck_from_data_frame scheduled__2024-02-27T05:03:00+00:00 [queued]>
+[2024-02-27T06:03:05.321+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 1
+[2024-02-27T06:03:05.338+0000] {taskinstance.py:2191} INFO - Executing <Task(_PythonDecoratedOperator): write_to_motherduck_from_data_frame> on 2024-02-27 05:03:00+00:00
+[2024-02-27T06:03:05.343+0000] {standard_task_runner.py:60} INFO - Started process 20448 to run task
+[2024-02-27T06:03:05.347+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'exchange_trade_data', 'write_to_motherduck_from_data_frame', 'scheduled__2024-02-27T05:03:00+00:00', '--job-id', '82', '--raw', '--subdir', 'DAGS_FOLDER/exchange.py', '--cfg-path', '/tmp/tmp13sp071s']
+[2024-02-27T06:03:05.349+0000] {standard_task_runner.py:88} INFO - Job 82: Subtask write_to_motherduck_from_data_frame
+[2024-02-27T06:03:05.369+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.8/site-packages/***/settings.py:194 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2024-02-27T06:03:05.411+0000] {task_command.py:423} INFO - Running <TaskInstance: exchange_trade_data.write_to_motherduck_from_data_frame scheduled__2024-02-27T05:03:00+00:00 [running]> on host e16193345271
+[2024-02-27T06:03:05.810+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='exchange_trade_data' AIRFLOW_CTX_TASK_ID='write_to_motherduck_from_data_frame' AIRFLOW_CTX_EXECUTION_DATE='2024-02-27T05:03:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-02-27T05:03:00+00:00'
+[2024-02-27T06:03:09.504+0000] {logging_mixin.py:188} INFO - Successfully inserted 73 rows in exchange
+[2024-02-27T06:03:09.504+0000] {python.py:201} INFO - Done. Returned value was: None
+[2024-02-27T06:03:09.521+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=exchange_trade_data, task_id=write_to_motherduck_from_data_frame, execution_date=20240227T050300, start_date=20240227T060305, end_date=20240227T060309
+[2024-02-27T06:03:09.560+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-02-27T06:03:09.613+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-02-27T06:08:40.875+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: exchange_trade_data.write_to_motherduck_from_data_frame scheduled__2024-02-27T05:03:00+00:00 [queued]>
+[2024-02-27T06:08:40.891+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: exchange_trade_data.write_to_motherduck_from_data_frame scheduled__2024-02-27T05:03:00+00:00 [queued]>
+[2024-02-27T06:08:40.892+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 1
+[2024-02-27T06:08:40.910+0000] {taskinstance.py:2191} INFO - Executing <Task(_PythonDecoratedOperator): write_to_motherduck_from_data_frame> on 2024-02-27 05:03:00+00:00
+[2024-02-27T06:08:40.916+0000] {standard_task_runner.py:60} INFO - Started process 21747 to run task
+[2024-02-27T06:08:40.920+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'exchange_trade_data', 'write_to_motherduck_from_data_frame', 'scheduled__2024-02-27T05:03:00+00:00', '--job-id', '88', '--raw', '--subdir', 'DAGS_FOLDER/exchange.py', '--cfg-path', '/tmp/tmplqgsx9uv']
+[2024-02-27T06:08:40.921+0000] {standard_task_runner.py:88} INFO - Job 88: Subtask write_to_motherduck_from_data_frame
+[2024-02-27T06:08:40.939+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.8/site-packages/***/settings.py:194 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2024-02-27T06:08:40.980+0000] {task_command.py:423} INFO - Running <TaskInstance: exchange_trade_data.write_to_motherduck_from_data_frame scheduled__2024-02-27T05:03:00+00:00 [running]> on host e16193345271
+[2024-02-27T06:08:41.309+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='exchange_trade_data' AIRFLOW_CTX_TASK_ID='write_to_motherduck_from_data_frame' AIRFLOW_CTX_EXECUTION_DATE='2024-02-27T05:03:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-02-27T05:03:00+00:00'
+[2024-02-27T06:08:45.133+0000] {logging_mixin.py:188} INFO - Successfully inserted 73 rows in exchange
+[2024-02-27T06:08:45.134+0000] {python.py:201} INFO - Done. Returned value was: None
+[2024-02-27T06:08:45.146+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=exchange_trade_data, task_id=write_to_motherduck_from_data_frame, execution_date=20240227T050300, start_date=20240227T060840, end_date=20240227T060845
+[2024-02-27T06:08:45.206+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-02-27T06:08:45.233+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,14 @@
+[2024-02-27T07:56:59.543+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: exchange_trade_data.get_exchange_data manual__2024-02-27T07:56:56.132015+00:00 [queued]>
+[2024-02-27T07:56:59.575+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: exchange_trade_data.get_exchange_data manual__2024-02-27T07:56:56.132015+00:00 [queued]>
+[2024-02-27T07:56:59.577+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 1
+[2024-02-27T07:56:59.639+0000] {taskinstance.py:2191} INFO - Executing <Task(_PythonDecoratedOperator): get_exchange_data> on 2024-02-27 07:56:56.132015+00:00
+[2024-02-27T07:56:59.655+0000] {standard_task_runner.py:60} INFO - Started process 29356 to run task
+[2024-02-27T07:56:59.660+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'exchange_trade_data', 'get_exchange_data', 'manual__2024-02-27T07:56:56.132015+00:00', '--job-id', '92', '--raw', '--subdir', 'DAGS_FOLDER/exchange.py', '--cfg-path', '/tmp/tmp6s7kh1pt']
+[2024-02-27T07:56:59.662+0000] {standard_task_runner.py:88} INFO - Job 92: Subtask get_exchange_data
+[2024-02-27T07:56:59.710+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.8/site-packages/***/settings.py:194 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2024-02-27T07:56:59.789+0000] {task_command.py:423} INFO - Running <TaskInstance: exchange_trade_data.get_exchange_data manual__2024-02-27T07:56:56.132015+00:00 [running]> on host e16193345271
+[2024-02-27T07:57:00.232+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='exchange_trade_data' AIRFLOW_CTX_TASK_ID='get_exchange_data' AIRFLOW_CTX_EXECUTION_DATE='2024-02-27T07:56:56.132015+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-02-27T07:56:56.132015+00:00'
+[2024-02-27T07:57:08.240+0000] {python.py:201} INFO - Done. Returned value was: None
+[2024-02-27T07:57:08.255+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=exchange_trade_data, task_id=get_exchange_data, execution_date=20240227T075656, start_date=20240227T075659, end_date=20240227T075708
+[2024-02-27T07:57:08.315+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-02-27T07:57:08.581+0000] {taskinstance.py:3280} INFO - 1 downstream tasks scheduled from follow-on schedule check

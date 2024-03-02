@@ -1,0 +1,14 @@
+[2024-03-01T14:45:39.791+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: exchange_trade_data.write_to_motherduck_from_data_frame manual__2024-03-01T14:43:37.729508+00:00 [queued]>
+[2024-03-01T14:45:39.810+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: exchange_trade_data.write_to_motherduck_from_data_frame manual__2024-03-01T14:43:37.729508+00:00 [queued]>
+[2024-03-01T14:45:39.811+0000] {taskinstance.py:2170} INFO - Starting attempt 2 of 2
+[2024-03-01T14:45:40.132+0000] {taskinstance.py:2191} INFO - Executing <Task(_PythonDecoratedOperator): write_to_motherduck_from_data_frame> on 2024-03-01 14:43:37.729508+00:00
+[2024-03-01T14:45:40.140+0000] {standard_task_runner.py:60} INFO - Started process 1995 to run task
+[2024-03-01T14:45:40.144+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'exchange_trade_data', 'write_to_motherduck_from_data_frame', 'manual__2024-03-01T14:43:37.729508+00:00', '--job-id', '18', '--raw', '--subdir', 'DAGS_FOLDER/exchange.py', '--cfg-path', '/tmp/tmp8vtnjogf']
+[2024-03-01T14:45:40.146+0000] {standard_task_runner.py:88} INFO - Job 18: Subtask write_to_motherduck_from_data_frame
+[2024-03-01T14:45:40.207+0000] {task_command.py:423} INFO - Running <TaskInstance: exchange_trade_data.write_to_motherduck_from_data_frame manual__2024-03-01T14:43:37.729508+00:00 [running]> on host 11bab81981d3
+[2024-03-01T14:45:40.505+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='exchange_trade_data' AIRFLOW_CTX_TASK_ID='write_to_motherduck_from_data_frame' AIRFLOW_CTX_EXECUTION_DATE='2024-03-01T14:43:37.729508+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-03-01T14:43:37.729508+00:00'
+[2024-03-01T14:45:45.194+0000] {logging_mixin.py:188} INFO - Successfully inserted 73 rows in exchange
+[2024-03-01T14:45:45.195+0000] {python.py:201} INFO - Done. Returned value was: None
+[2024-03-01T14:45:45.212+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=exchange_trade_data, task_id=write_to_motherduck_from_data_frame, execution_date=20240301T144337, start_date=20240301T144539, end_date=20240301T144545
+[2024-03-01T14:45:45.295+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-03-01T14:45:45.317+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,14 @@
+[2024-02-26T08:00:47.859+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: exchange_trade_data.connect_to_md manual__2024-02-26T08:00:43.743387+00:00 [queued]>
+[2024-02-26T08:00:47.935+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: exchange_trade_data.connect_to_md manual__2024-02-26T08:00:43.743387+00:00 [queued]>
+[2024-02-26T08:00:47.936+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 1
+[2024-02-26T08:00:48.367+0000] {taskinstance.py:2191} INFO - Executing <Task(_PythonDecoratedOperator): connect_to_md> on 2024-02-26 08:00:43.743387+00:00
+[2024-02-26T08:00:48.382+0000] {standard_task_runner.py:60} INFO - Started process 3844 to run task
+[2024-02-26T08:00:48.390+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'exchange_trade_data', 'connect_to_md', 'manual__2024-02-26T08:00:43.743387+00:00', '--job-id', '57', '--raw', '--subdir', 'DAGS_FOLDER/exchange.py', '--cfg-path', '/tmp/tmpa6qk_p_y']
+[2024-02-26T08:00:48.393+0000] {standard_task_runner.py:88} INFO - Job 57: Subtask connect_to_md
+[2024-02-26T08:00:48.553+0000] {task_command.py:423} INFO - Running <TaskInstance: exchange_trade_data.connect_to_md manual__2024-02-26T08:00:43.743387+00:00 [running]> on host f5283f9a0a92
+[2024-02-26T08:00:49.038+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='exchange_trade_data' AIRFLOW_CTX_TASK_ID='connect_to_md' AIRFLOW_CTX_EXECUTION_DATE='2024-02-26T08:00:43.743387+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-02-26T08:00:43.743387+00:00'
+[2024-02-26T08:00:53.002+0000] {logging_mixin.py:188} INFO - Failed to connect to the database: Invalid Input Error: Initialization function "motherduck_init" from file "/home/***/.duckdb/extensions/v0.9.2/linux_amd64_gcc4/motherduck.duckdb_extension" threw an exception: "Invalid Input Error: Initialization function "motherduck_init" from file "/home/***/.duckdb/extensions/v0.9.2/linux_amd64_gcc4/motherduck.v1.15.17.duckdb_extension" threw an exception: "IO Error: RPC 'GET_WELCOME_PACK' failed: Jwt is not in the form of Header.Payload.Signature with two dots and 3 sections (UNAUTHENTICATED, request id: '818de46e-5644-47de-98b4-7923956e70fd')""
+[2024-02-26T08:00:53.003+0000] {python.py:201} INFO - Done. Returned value was: None
+[2024-02-26T08:00:53.019+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=exchange_trade_data, task_id=connect_to_md, execution_date=20240226T080043, start_date=20240226T080047, end_date=20240226T080053
+[2024-02-26T08:00:53.072+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-02-26T08:00:53.121+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,50 @@
+[2024-02-24T19:17:10.267+0000] {processor.py:161} INFO - Started process (PID=43) to work on /opt/airflow/dags/example.py
+[2024-02-24T19:17:10.299+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/example.py for tasks to queue
+[2024-02-24T19:17:10.333+0000] {logging_mixin.py:188} INFO - [2024-02-24T19:17:10.332+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/example.py
+[2024-02-24T19:17:10.599+0000] {processor.py:840} INFO - DAG(s) 'example' retrieved from /opt/airflow/dags/example.py
+[2024-02-24T19:17:14.361+0000] {logging_mixin.py:188} INFO - [2024-02-24T19:17:14.359+0000] {override.py:1769} INFO - Created Permission View: can delete on DAG:example
+[2024-02-24T19:17:14.631+0000] {logging_mixin.py:188} INFO - [2024-02-24T19:17:14.630+0000] {override.py:1769} INFO - Created Permission View: can edit on DAG:example
+[2024-02-24T19:17:14.777+0000] {logging_mixin.py:188} INFO - [2024-02-24T19:17:14.776+0000] {override.py:1769} INFO - Created Permission View: can read on DAG:example
+[2024-02-24T19:17:14.779+0000] {logging_mixin.py:188} INFO - [2024-02-24T19:17:14.778+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2024-02-24T19:17:15.050+0000] {logging_mixin.py:188} INFO - [2024-02-24T19:17:15.049+0000] {dag.py:3058} INFO - Creating ORM DAG for example
+[2024-02-24T19:17:15.149+0000] {logging_mixin.py:188} INFO - [2024-02-24T19:17:15.148+0000] {dag.py:3823} INFO - Setting next_dagrun for example to 2024-02-23 00:00:00+00:00, run_after=2024-02-24 00:00:00+00:00
+[2024-02-24T19:17:15.667+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/example.py took 5.468 seconds
+[2024-02-24T19:17:46.321+0000] {processor.py:161} INFO - Started process (PID=50) to work on /opt/airflow/dags/example.py
+[2024-02-24T19:17:46.374+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/example.py for tasks to queue
+[2024-02-24T19:17:46.620+0000] {logging_mixin.py:188} INFO - [2024-02-24T19:17:46.613+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/example.py
+[2024-02-24T19:17:46.834+0000] {processor.py:840} INFO - DAG(s) 'example' retrieved from /opt/airflow/dags/example.py
+[2024-02-24T19:17:47.275+0000] {logging_mixin.py:188} INFO - [2024-02-24T19:17:47.274+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2024-02-24T19:17:47.604+0000] {logging_mixin.py:188} INFO - [2024-02-24T19:17:47.603+0000] {dag.py:3823} INFO - Setting next_dagrun for example to 2024-02-23 00:00:00+00:00, run_after=2024-02-24 00:00:00+00:00
+[2024-02-24T19:17:47.724+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/example.py took 1.478 seconds
+[2024-02-24T19:18:17.837+0000] {processor.py:161} INFO - Started process (PID=57) to work on /opt/airflow/dags/example.py
+[2024-02-24T19:18:17.839+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/example.py for tasks to queue
+[2024-02-24T19:18:17.843+0000] {logging_mixin.py:188} INFO - [2024-02-24T19:18:17.842+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/example.py
+[2024-02-24T19:18:17.871+0000] {processor.py:840} INFO - DAG(s) 'example' retrieved from /opt/airflow/dags/example.py
+[2024-02-24T19:18:17.954+0000] {logging_mixin.py:188} INFO - [2024-02-24T19:18:17.953+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2024-02-24T19:18:18.024+0000] {logging_mixin.py:188} INFO - [2024-02-24T19:18:18.023+0000] {dag.py:3823} INFO - Setting next_dagrun for example to 2024-02-23 00:00:00+00:00, run_after=2024-02-24 00:00:00+00:00
+[2024-02-24T19:18:18.077+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/example.py took 0.251 seconds
+[2024-02-24T19:18:48.401+0000] {processor.py:161} INFO - Started process (PID=70) to work on /opt/airflow/dags/example.py
+[2024-02-24T19:18:48.406+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/example.py for tasks to queue
+[2024-02-24T19:18:48.412+0000] {logging_mixin.py:188} INFO - [2024-02-24T19:18:48.410+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/example.py
+[2024-02-24T19:18:48.437+0000] {processor.py:840} INFO - DAG(s) 'example' retrieved from /opt/airflow/dags/example.py
+[2024-02-24T19:18:48.513+0000] {logging_mixin.py:188} INFO - [2024-02-24T19:18:48.513+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2024-02-24T19:18:48.541+0000] {logging_mixin.py:188} INFO - [2024-02-24T19:18:48.541+0000] {dag.py:3823} INFO - Setting next_dagrun for example to 2024-02-23 00:00:00+00:00, run_after=2024-02-24 00:00:00+00:00
+[2024-02-24T19:18:48.566+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/example.py took 0.175 seconds
+[2024-02-24T19:19:18.781+0000] {processor.py:161} INFO - Started process (PID=90) to work on /opt/airflow/dags/example.py
+[2024-02-24T19:19:18.787+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/example.py for tasks to queue
+[2024-02-24T19:19:18.794+0000] {logging_mixin.py:188} INFO - [2024-02-24T19:19:18.793+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/example.py
+[2024-02-24T19:19:18.832+0000] {processor.py:840} INFO - DAG(s) 'example' retrieved from /opt/airflow/dags/example.py
+[2024-02-24T19:19:18.894+0000] {logging_mixin.py:188} INFO - [2024-02-24T19:19:18.894+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2024-02-24T19:19:18.971+0000] {logging_mixin.py:188} INFO - [2024-02-24T19:19:18.971+0000] {dag.py:3823} INFO - Setting next_dagrun for example to 2024-02-24 00:00:00+00:00, run_after=2024-02-25 00:00:00+00:00
+[2024-02-24T19:19:19.037+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/example.py took 0.266 seconds
+[2024-02-24T19:19:48.302+0000] {processor.py:161} INFO - Started process (PID=91) to work on /opt/airflow/dags/example.py
+[2024-02-24T19:19:48.306+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/example.py for tasks to queue
+[2024-02-24T19:19:48.310+0000] {logging_mixin.py:188} INFO - [2024-02-24T19:19:48.309+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/example.py
+[2024-02-24T19:19:48.328+0000] {processor.py:840} INFO - DAG(s) 'tutorial' retrieved from /opt/airflow/dags/example.py
+[2024-02-24T19:19:48.697+0000] {logging_mixin.py:188} INFO - [2024-02-24T19:19:48.695+0000] {override.py:1769} INFO - Created Permission View: can delete on DAG:tutorial
+[2024-02-24T19:19:48.814+0000] {logging_mixin.py:188} INFO - [2024-02-24T19:19:48.813+0000] {override.py:1769} INFO - Created Permission View: can edit on DAG:tutorial
+[2024-02-24T19:19:48.887+0000] {logging_mixin.py:188} INFO - [2024-02-24T19:19:48.886+0000] {override.py:1769} INFO - Created Permission View: can read on DAG:tutorial
+[2024-02-24T19:19:48.888+0000] {logging_mixin.py:188} INFO - [2024-02-24T19:19:48.888+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2024-02-24T19:19:48.959+0000] {logging_mixin.py:188} INFO - [2024-02-24T19:19:48.958+0000] {dag.py:3058} INFO - Creating ORM DAG for tutorial
+[2024-02-24T19:19:48.993+0000] {logging_mixin.py:188} INFO - [2024-02-24T19:19:48.992+0000] {dag.py:3823} INFO - Setting next_dagrun for tutorial to 2024-02-23 00:00:00+00:00, run_after=2024-02-24 00:00:00+00:00
+[2024-02-24T19:19:49.034+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/example.py took 0.739 seconds

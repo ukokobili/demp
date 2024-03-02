@@ -1,0 +1,26 @@
+[2024-02-24T19:19:17.513+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: example.templated scheduled__2024-02-23T00:00:00+00:00 [queued]>
+[2024-02-24T19:19:17.555+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: example.templated scheduled__2024-02-23T00:00:00+00:00 [queued]>
+[2024-02-24T19:19:17.563+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 2
+[2024-02-24T19:19:17.648+0000] {taskinstance.py:2191} INFO - Executing <Task(BashOperator): templated> on 2024-02-23 00:00:00+00:00
+[2024-02-24T19:19:17.665+0000] {standard_task_runner.py:60} INFO - Started process 100 to run task
+[2024-02-24T19:19:17.671+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'example', 'templated', 'scheduled__2024-02-23T00:00:00+00:00', '--job-id', '7', '--raw', '--subdir', 'DAGS_FOLDER/example.py', '--cfg-path', '/tmp/tmp43k9qfwr']
+[2024-02-24T19:19:17.685+0000] {standard_task_runner.py:88} INFO - Job 7: Subtask templated
+[2024-02-24T19:19:18.004+0000] {task_command.py:423} INFO - Running <TaskInstance: example.templated scheduled__2024-02-23T00:00:00+00:00 [running]> on host d7819a57429e
+[2024-02-24T19:19:18.830+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='***@example.com' AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='example' AIRFLOW_CTX_TASK_ID='templated' AIRFLOW_CTX_EXECUTION_DATE='2024-02-23T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-02-23T00:00:00+00:00'
+[2024-02-24T19:19:18.832+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2024-02-24T19:19:18.834+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', '\n\n    echo "2024-02-23"\n    echo "2024-03-01"\n\n    echo "2024-02-23"\n    echo "2024-03-01"\n\n    echo "2024-02-23"\n    echo "2024-03-01"\n\n    echo "2024-02-23"\n    echo "2024-03-01"\n\n    echo "2024-02-23"\n    echo "2024-03-01"\n']
+[2024-02-24T19:19:18.853+0000] {subprocess.py:86} INFO - Output:
+[2024-02-24T19:19:18.856+0000] {subprocess.py:93} INFO - 2024-02-23
+[2024-02-24T19:19:18.857+0000] {subprocess.py:93} INFO - 2024-03-01
+[2024-02-24T19:19:18.858+0000] {subprocess.py:93} INFO - 2024-02-23
+[2024-02-24T19:19:18.859+0000] {subprocess.py:93} INFO - 2024-03-01
+[2024-02-24T19:19:18.859+0000] {subprocess.py:93} INFO - 2024-02-23
+[2024-02-24T19:19:18.860+0000] {subprocess.py:93} INFO - 2024-03-01
+[2024-02-24T19:19:18.860+0000] {subprocess.py:93} INFO - 2024-02-23
+[2024-02-24T19:19:18.861+0000] {subprocess.py:93} INFO - 2024-03-01
+[2024-02-24T19:19:18.861+0000] {subprocess.py:93} INFO - 2024-02-23
+[2024-02-24T19:19:18.862+0000] {subprocess.py:93} INFO - 2024-03-01
+[2024-02-24T19:19:18.863+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2024-02-24T19:19:18.912+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=example, task_id=templated, execution_date=20240223T000000, start_date=20240224T191917, end_date=20240224T191918
+[2024-02-24T19:19:19.003+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-02-24T19:19:19.047+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,35 @@
+[2024-03-02T03:16:39.457+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ecommerce_pipeline.extract_products scheduled__2024-03-02T02:01:00+00:00 [queued]>
+[2024-03-02T03:16:39.625+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ecommerce_pipeline.extract_products scheduled__2024-03-02T02:01:00+00:00 [queued]>
+[2024-03-02T03:16:39.627+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 1
+[2024-03-02T03:16:40.242+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): extract_products> on 2024-03-02 02:01:00+00:00
+[2024-03-02T03:16:40.471+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'ecommerce_pipeline', 'extract_products', 'scheduled__2024-03-02T02:01:00+00:00', '--job-id', '62', '--raw', '--subdir', 'DAGS_FOLDER/ecom.py', '--cfg-path', '/tmp/tmp2dhbt8tf']
+[2024-03-02T03:16:40.492+0000] {standard_task_runner.py:88} INFO - Job 62: Subtask extract_products
+[2024-03-02T03:16:40.430+0000] {standard_task_runner.py:60} INFO - Started process 1810 to run task
+[2024-03-02T03:16:41.605+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.8/site-packages/***/settings.py:194 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2024-03-02T03:16:42.559+0000] {task_command.py:423} INFO - Running <TaskInstance: ecommerce_pipeline.extract_products scheduled__2024-03-02T02:01:00+00:00 [running]> on host 70b88be0f8e4
+[2024-03-02T03:16:44.107+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='ecommerce_pipeline' AIRFLOW_CTX_TASK_ID='extract_products' AIRFLOW_CTX_EXECUTION_DATE='2024-03-02T02:01:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-03-02T02:01:00+00:00'
+[2024-03-02T03:16:44.130+0000] {logging_mixin.py:188} INFO - Here's some information about the data stored in ./data/products.csv:
+[2024-03-02T03:16:44.132+0000] {logging_mixin.py:188} INFO - 
+There are 10 rows and 3 columns in the DataFrame.
+[2024-03-02T03:16:44.133+0000] {logging_mixin.py:188} INFO - 
+The columns in the DataFrame have the following types: 
+[2024-03-02T03:16:44.140+0000] {logging_mixin.py:188} INFO - product_id      int64
+name           object
+price         float64
+dtype: object
+[2024-03-02T03:16:44.141+0000] {logging_mixin.py:188} INFO - 
+To view the DataFrame extracted from ./data/products.csv, display the value returned by this function!
+[2024-03-02T03:16:44.142+0000] {python.py:201} INFO - Done. Returned value was:    product_id                                          name  price
+0           1                    Adaptive modular help-desk  40.47
+1           2      Enhanced zero administration parallelism  84.58
+2           3             Exclusive fault-tolerant attitude  40.82
+3           4                 Horizontal holistic algorithm  37.72
+4           5  Automated 4thgeneration budgetary management  92.53
+5           6                 Innovative bifurcated adapter  21.59
+6           7          Extended context-sensitive migration  10.64
+7           8                    Up-sized holistic firmware  45.99
+8           9                  Digitized impactful database  51.56
+9          10                 Reactive heuristic definition  96.40
+[2024-03-02T03:16:44.603+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=ecommerce_pipeline, task_id=extract_products, execution_date=20240302T020100, start_date=20240302T031639, end_date=20240302T031644
+[2024-03-02T03:16:44.753+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-03-02T03:16:44.785+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

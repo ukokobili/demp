@@ -1,0 +1,18 @@
+[2024-02-26T17:15:35.924+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: tutorial.print_date scheduled__2024-02-25T00:00:00+00:00 [queued]>
+[2024-02-26T17:15:36.016+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: tutorial.print_date scheduled__2024-02-25T00:00:00+00:00 [queued]>
+[2024-02-26T17:15:36.017+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 2
+[2024-02-26T17:15:36.213+0000] {taskinstance.py:2191} INFO - Executing <Task(BashOperator): print_date> on 2024-02-25 00:00:00+00:00
+[2024-02-26T17:15:36.230+0000] {standard_task_runner.py:60} INFO - Started process 8141 to run task
+[2024-02-26T17:15:36.244+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'tutorial', 'print_date', 'scheduled__2024-02-25T00:00:00+00:00', '--job-id', '37', '--raw', '--subdir', 'DAGS_FOLDER/coincap.py', '--cfg-path', '/tmp/tmpw7sq7zj0']
+[2024-02-26T17:15:36.247+0000] {standard_task_runner.py:88} INFO - Job 37: Subtask print_date
+[2024-02-26T17:15:36.445+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.8/site-packages/***/settings.py:194 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2024-02-26T17:15:36.667+0000] {task_command.py:423} INFO - Running <TaskInstance: tutorial.print_date scheduled__2024-02-25T00:00:00+00:00 [running]> on host e16193345271
+[2024-02-26T17:15:37.676+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='***@example.com' AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='tutorial' AIRFLOW_CTX_TASK_ID='print_date' AIRFLOW_CTX_EXECUTION_DATE='2024-02-25T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-02-25T00:00:00+00:00'
+[2024-02-26T17:15:37.688+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2024-02-26T17:15:37.690+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'date']
+[2024-02-26T17:15:37.729+0000] {subprocess.py:86} INFO - Output:
+[2024-02-26T17:15:37.791+0000] {subprocess.py:93} INFO - Mon Feb 26 17:15:37 UTC 2024
+[2024-02-26T17:15:37.792+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2024-02-26T17:15:37.959+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=tutorial, task_id=print_date, execution_date=20240225T000000, start_date=20240226T171535, end_date=20240226T171537
+[2024-02-26T17:15:38.194+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-02-26T17:15:38.416+0000] {taskinstance.py:3280} INFO - 2 downstream tasks scheduled from follow-on schedule check
