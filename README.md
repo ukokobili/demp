@@ -32,3 +32,8 @@ Optionally remove volumes:
 ```Bash
 docker-compose down -v
 ```
+
+Remove orphans
+```Bash
+docker-compose up -d --remove-orphans
+```
